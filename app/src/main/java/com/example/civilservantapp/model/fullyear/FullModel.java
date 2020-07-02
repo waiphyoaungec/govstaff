@@ -15,13 +15,16 @@ public class FullModel {
     private final double depositedAmt;
     @SerializedName("claim_amount")
     private final double claimAmount;
+    @SerializedName("deduct_data")
+    private final MyDeductData deductData;
 
-    public FullModel(String message, Object data, int paidMonth, double depositedAmt, double claimAmount) {
+    public FullModel(String message, Object data, int paidMonth, double depositedAmt, double claimAmount,MyDeductData deductData) {
         this.message = message;
         this.data = data;
         this.paidMonth = paidMonth;
         this.depositedAmt = depositedAmt;
         this.claimAmount = claimAmount;
+        this.deductData = deductData;
     }
 
     public String getMessage() {
@@ -30,6 +33,10 @@ public class FullModel {
 
     public Object getData() {
         return data;
+    }
+
+    public MyDeductData getDeductData() {
+        return deductData;
     }
 
     public int getPaidMonth() {
@@ -45,6 +52,10 @@ public class FullModel {
     }
 
     public static class Data {
+
+
+        @SerializedName("army_status")
+        private final String army_status;
         @SerializedName("id")
         private final int id;
         @SerializedName("policy_id")
@@ -83,8 +94,9 @@ public class FullModel {
         public Data(int id, String policyId, int age, int insuranceAmount, String name, String nrc,
                     String personalNo, int insurancePeroid, String startDate, String endDate,
                     String monthlyDate, String dueDate, int amount, int bankFee, int easypayFee,
-                    int shFee, int paymentStatus) {
+                    int shFee, int paymentStatus,String army_status) {
             this.id = id;
+            this.army_status = army_status;
             this.policyId = policyId;
             this.age = age;
             this.insuranceAmount = insuranceAmount;
@@ -151,6 +163,10 @@ public class FullModel {
             return dueDate;
         }
 
+        public String getArmy_status() {
+            return army_status;
+        }
+
         public int getAmount() {
             return amount;
         }
@@ -171,4 +187,70 @@ public class FullModel {
             return paymentStatus;
         }
     }
+    public   class MyDeductData {
+
+        @SerializedName("contract_copy")
+        private Long mContractCopy;
+        @SerializedName("contract_fines")
+        private Long mContractFines;
+        @SerializedName("loan")
+        private Long mLoan;
+        @SerializedName("loan_interest")
+        private Long mLoanInterest;
+        @SerializedName("lost_contract_stamp")
+        private Long mLostContractStamp;
+        @SerializedName("persistent_interest")
+        private Long mPersistentInterest;
+        @SerializedName("premium")
+        private Long mPremium;
+        @SerializedName("total_deduct_amount")
+        private Long mTotalDeductAmount;
+
+        public Long getContractCopy() {
+            return mContractCopy;
+        }
+
+
+
+
+        public Long getContractFines() {
+            return mContractFines;
+        }
+
+        public Long getLoan() {
+            return mLoan;
+        }
+
+        public Long getLoanInterest() {
+            return mLoanInterest;
+        }
+
+        public Long getLostContractStamp() {
+            return mLostContractStamp;
+        }
+
+        public Long getPersistentInterest() {
+            return mPersistentInterest;
+        }
+
+        public Long getPremium() {
+            return mPremium;
+        }
+
+        public Long getTotalDeductAmount() {
+            return mTotalDeductAmount;
+        }
+
+        public MyDeductData(Long mContractCopy, Long mContractFines, Long mLoan, Long mLoanInterest, Long mLostContractStamp, Long mPersistentInterest, Long mPremium, Long mTotalDeductAmount) {
+            this.mContractCopy = mContractCopy;
+            this.mContractFines = mContractFines;
+            this.mLoan = mLoan;
+            this.mLoanInterest = mLoanInterest;
+            this.mLostContractStamp = mLostContractStamp;
+            this.mPersistentInterest = mPersistentInterest;
+            this.mPremium = mPremium;
+            this.mTotalDeductAmount = mTotalDeductAmount;
+        }
+    }
+
 }

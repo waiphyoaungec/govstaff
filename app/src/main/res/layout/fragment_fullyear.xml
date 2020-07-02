@@ -12,10 +12,11 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedfullyear"
         android:layout_width="0dp"
+        android:layout_margin="8dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:scrollbars="vertical"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toTopOf="@+id/check_rest"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,10 +24,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/constraint_firstform"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             tools:context=".view.LifeInsuranceFirst">
 
             <TextView
@@ -54,10 +56,34 @@
                 android:singleLine="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+            <TextView
+            android:id="@+id/txt_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="အသက်အာမခံထားသူ ID"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/die_age" />
+            <EditText
+                android:id="@+id/edt_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_policyid" />
             <TextView
                 android:id="@+id/txt_policyid"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:text="ပေါ်လစီအမှတ်"
                 android:textColor="@color/colorAccent"
@@ -78,6 +104,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_policyid" />
             <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="8dp"
+                android:text="လာမည့်နှစ်မွေးနေ့တွင် ပြည့်မည့်အသက်"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_name" />
+            <EditText
+                android:id="@+id/die_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            <TextView
                 android:id="@+id/txt_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,6 +139,54 @@
                 app:layout_constraintTop_toBottomOf="@+id/die_policy" />
             <EditText
                 android:id="@+id/die_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/fullyear_nrc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="အမျိုးသားမှတ်ပုံတင် အမှတ်"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_policy" />
+            <EditText
+                android:id="@+id/edt_fullyear_nrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/fullyear_own_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="ကိုယ်ပိုင်အမှတ်"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_policy" />
+            <EditText
+                android:id="@+id/edt_fullyear_own_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/customer_bg"
@@ -169,6 +268,78 @@
                 android:singleLine="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
+
+            <TextView
+                android:id="@+id/full_year_soldier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="တပ်မတော်သား/အခြား"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_state_date" />
+            <EditText
+                android:id="@+id/ful_year_soldier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
+
+            <TextView
+                android:id="@+id/full_year_last_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="နောက်ဆုံး ပရီမီယံ သွင်းသည့်နေ့"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_state_date" />
+            <EditText
+                android:id="@+id/edt_fullyear_last_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
+
+            <TextView
+                android:id="@+id/full_year_last_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="ပရီမီယံ သက်တမ်း ကုန်ဆုံးသည့်နေ့"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_state_date" />
+            <EditText
+                android:id="@+id/edt_fullyear_last_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
             <TextView
                 android:id="@+id/txt_paid_month"
                 android:layout_width="wrap_content"
@@ -220,7 +391,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:text="ထုတ်ယူနိုင်သော ငွေပမာဏ"
+                android:text="နှစ်စေ့ ငွေပမာဏ"
                 android:textColor="@color/colorAccent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/die_deposite_amount" />
@@ -238,18 +409,17 @@
                 android:singleLine="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_loan_amount" />
+
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/loan_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="အသက်"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/die_name" />
+                android:text="ချေးငွေ"
+                android:textColor="@color/colorAccent" />
             <EditText
-                android:id="@+id/die_age"
-                android:layout_width="0dp"
+                android:id="@+id/edt_fullloan_money"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/customer_bg"
                 android:clickable="false"
@@ -259,10 +429,148 @@
                 android:imeOptions="actionGo"
                 android:padding="10dp"
                 android:singleLine="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                />
+            <TextView
+                android:id="@+id/loan_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ချေးငွေ အတိုး"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_fullloan_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ပရိမီယံလို‌ငွေ / ပရီမီယံပိုငွေ"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_full_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/persistent_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="တည်မြဲရေးအတိုး"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_full_persistent_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/lost_contract_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="စာချုပ်ပျောက် တံဆိပ်ခေါင်း"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_lost_full_contract_stamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/contract_fines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="စာချုပ်ပျောက် ဒဏ်ကြေး"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_full_contract_fines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/contract_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="စာချုပ်ပျောက် မိတ္တူ"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_full_contract_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/total_deduct_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="နှုတ်ဖြတ်ငွေစုစုပေါင်း"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/edt_full_total_deduct_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"/>
+
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
     <Button
@@ -281,6 +589,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:layout_margin="8dp"
         android:id="@+id/not_successful"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -291,13 +600,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/rest_status"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="8dp"
+                android:id="@+id/rest_status"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+
 
         <TextView
+            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ပေးသွင်းပြီးသည့်လ" />

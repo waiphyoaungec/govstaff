@@ -465,9 +465,9 @@ class FetchDataViewModel: ViewModel() {
 
             })
     }
-    fun checkFullYear(policyId : String){
+    fun checkFullYear(policyId : String,lost : String){
         fullcheck.postValue(NetWorkViewState.loading(true))
-        client.checkFullYear(policyId)
+        client.checkFullYear(policyId,lost)
             .enqueue(object : Callback<FullModel>{
                 override fun onFailure(call: Call<FullModel>, t: Throwable) {
                     fullcheck.postValue(NetWorkViewState.error(t))
@@ -482,27 +482,28 @@ class FetchDataViewModel: ViewModel() {
                                 object : TypeToken<FullModel.Data>() {}
                             val data = gson.fromJson<FullModel.Data>(gson.toJson(rest!!.data),responseTypeToken.type)
                             val restModel = FullModel(rest.message,data,rest.paidMonth,rest.depositedAmt,
-                                rest.claimAmount)
+                                rest.claimAmount,rest.deductData)
                             fullcheck.postValue(NetWorkViewState.success(restModel))
                         }
                         else{
                             val fail_data = rest!!.data.toString()
                             var deadModel = FullModel(rest.message,fail_data,rest.paidMonth,rest.depositedAmt,
-                                rest.claimAmount)
+                                rest.claimAmount,rest.deductData)
                             fullcheck.postValue(NetWorkViewState.success(deadModel))
                         }
 
                     }
 
                     else{
-                        checkRest.postValue(NetWorkViewState.error(HttpException(response)))
+                        fullcheck.postValue(NetWorkViewState.error(HttpException(response)))
                     }
                 }
             })
     }
-    fun sendFull(personId : String,amount : String){
+    fun sendFull(personId : String,amount : String,loan : String,loanInterest: String,premium: String,persistance : String, contractFine: String,contractCopy: String,
+    lost_contract_stamp: String){
         sendfull.postValue(NetWorkViewState.loading(true))
-        client.sendFullYear(personId,amount)
+        client.sendFullYear(personId,amount,loan,loanInterest,premium,persistance,contractFine,contractCopy,lost_contract_stamp)
             .enqueue(object : Callback<SendFullYear>{
                 override fun onFailure(call: Call<SendFullYear>, t: Throwable) {
                     sendfull.postValue(NetWorkViewState.error(t))

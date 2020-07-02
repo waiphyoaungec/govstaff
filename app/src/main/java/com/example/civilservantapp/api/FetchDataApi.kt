@@ -180,12 +180,22 @@ interface FetchDataApi {
     ) : Call<SendRest>
     @GET("claim/fullyear")
     fun checkFullYear(
-        @Query("policy_id") id : String
+        @Query("policy_id") id : String,
+        @Query("lost_contract") lost_contract : String
     ) : Call<FullModel>
     @POST("fullyear/store")
     fun sendFullYear(
         @Query("insurance_person_id") person_id : String,
-        @Query("claim_amount") calim_amout : String
+        @Query("claim_amount") calim_amout : String,
+        @Query("loan") loan : String,
+        @Query("loan_interest") loan_interest : String,
+        @Query("premium") premium: String,
+        @Query("persistent_interest") persistent: String,
+        @Query("contract_fines") contract_fine: String,
+        @Query("contract_copy") contract_copy : String,
+        @Query("lost_contract_stamp") lost_contract_stamp : String
+
+
     ) : Call<SendFullYear>
 
 }

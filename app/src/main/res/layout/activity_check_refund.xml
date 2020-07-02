@@ -42,9 +42,10 @@
         app:layout_constraintVertical_bias="0.0"
         tools:visibility="visible">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/constraint_firstform"
             android:layout_width="match_parent"
+            android:orientation="vertical"
             android:layout_height="wrap_content"
             tools:context=".view.LifeInsuranceFirst">
 
@@ -56,8 +57,7 @@
                 android:padding="3dp"
                 android:text="@string/servname"
                 android:textColor="@color/colorAccent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                />
 
             <EditText
                 android:id="@+id/die_name"
@@ -72,20 +72,18 @@
                 android:inputType="none"
                 android:padding="10dp"
                 android:singleLine="true"
-                app:layout_constraintStart_toStartOf="parent"
+                />
 
-
-                app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
             <TextView
                 android:id="@+id/txt_policyid"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:text="ပေါ်လစီအမှတ်"
-                android:textColor="@color/colorAccent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/die_name" />
+                android:textColor="@color/colorAccent" />
+
+
 
             <EditText
                 android:id="@+id/die_policy"
@@ -99,83 +97,16 @@
                 android:imeOptions="actionGo"
                 android:padding="10dp"
                 android:singleLine="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_policyid" />
-
+                />
             <TextView
-                android:id="@+id/txt_nrc"
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:text="အမျိုးသားမှတ်ပုံတင် အမှတ်"
+                android:layout_marginTop="8dp"
+                android:text="အသက်အာမခံထားသူ ID"
                 android:textColor="@color/colorAccent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/refund_age" />
-
-            <TextView
-                android:id="@+id/own_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:text="ကိုယ်ပိုင်အမှတ်"
-                android:textColor="@color/colorAccent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/die_nrc" />
-
-            <TextView
-                android:id="@+id/txt_nrc2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:text="လာမည့်နှစ်မွေးနေ့တွင် ပြည့်မည့်အသက်"
-                android:textColor="@color/colorAccent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/refund_user_id" />
-
-            <EditText
-                android:id="@+id/die_nrc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/customer_bg"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="true"
-                android:hint="@string/supply_hint"
-                android:imeOptions="actionGo"
-                android:padding="10dp"
-                android:singleLine="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_nrc" />
-
-            <EditText
-                android:id="@+id/edt_own_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/customer_bg"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="true"
-                android:hint="@string/supply_hint"
-                android:imeOptions="actionGo"
-                android:padding="10dp"
-                android:singleLine="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/own_id" />
-
-            <EditText
-                android:id="@+id/refund_age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/customer_bg"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="true"
-                android:hint="@string/supply_hint"
-                android:imeOptions="actionGo"
-                android:padding="10dp"
-                android:singleLine="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_nrc2" />
+                app:layout_constraintTop_toBottomOf="@+id/die_policy" />
 
             <EditText
                 android:id="@+id/refund_user_id"
@@ -192,6 +123,84 @@
                 android:singleLine="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+            <TextView
+                android:id="@+id/txt_nrc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="အမျိုးသားမှတ်ပုံတင် အမှတ်"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/refund_age" />
+            <EditText
+                android:id="@+id/die_nrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nrc" />
+
+            <TextView
+                android:id="@+id/own_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="ကိုယ်ပိုင်အမှတ်"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_nrc" />
+            <EditText
+                android:id="@+id/edt_own_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/own_id" />
+
+
+            <TextView
+                android:id="@+id/txt_nrc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="လာမည့်နှစ်မွေးနေ့တွင် ပြည့်မည့်အသက်"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/refund_user_id" />
+
+
+
+
+            <EditText
+                android:id="@+id/refund_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nrc2" />
 
             <TextView
                 android:id="@+id/txt_amount"
@@ -294,6 +303,81 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
 
             <TextView
+                android:id="@+id/refundSoldier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="တပ်မတော်သား/အခြား"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_state_date" />
+
+            <EditText
+                android:id="@+id/edt_refund_soldier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
+
+            <TextView
+                android:id="@+id/refund_last_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="နောက်ဆုံး ပရီမီယံ သွင်းသည့်နေ့"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_state_date" />
+
+            <EditText
+                android:id="@+id/edt_refund_last_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
+
+            <TextView
+                android:id="@+id/end_date_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="ပရီမီယံ သက်တမ်း ကုန်ဆုံးသည့်နေ့"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/die_state_date" />
+
+            <EditText
+                android:id="@+id/edt_refund_end_date_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customer_bg"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/supply_hint"
+                android:imeOptions="actionGo"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_end_date" />
+
+            <TextView
                 android:id="@+id/txt_paid_month"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -371,15 +455,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_loan_amount" />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="အသက်အာမခံထားသူ ID"
-                android:textColor="@color/colorAccent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/die_policy" />
+
 
             <LinearLayout
                 android:id="@+id/loan_layout"
@@ -553,7 +629,7 @@
             </LinearLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 

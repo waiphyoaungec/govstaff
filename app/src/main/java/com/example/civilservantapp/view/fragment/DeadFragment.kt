@@ -25,6 +25,7 @@ class DeadFragment : Fragment() {
     lateinit var policy_id : String
     lateinit var date : String
     lateinit var showDate : String
+    lateinit var lost : String
 
     val fetchDataViewModel : FetchDataViewModel by lazy {
         ViewModelProvider(this).get(FetchDataViewModel::class.java)

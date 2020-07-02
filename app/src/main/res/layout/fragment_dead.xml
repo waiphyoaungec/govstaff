@@ -27,8 +27,9 @@
         android:layout_marginEnd="8dp"
         android:text="သေဆုံးသည့်ရက်စွဲ"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dead_policy_id" />
+        app:layout_constraintTop_toBottomOf="@+id/rdo_choose" />
 
     <EditText
         android:id="@+id/dead_policy_id"
@@ -95,5 +96,38 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="စာချုပ်ပျောက်ဆုံးမှု"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dead_policy_id" />
+    <RadioGroup
+        android:id="@+id/rdo_choose"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+        <RadioButton
+            android:id="@+id/rdo_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ပျောက်ဆုံး" />
+        <RadioButton
+            android:id="@+id/rdo_other"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="မပျောက်ဆုံး" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

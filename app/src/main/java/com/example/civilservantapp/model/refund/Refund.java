@@ -108,10 +108,13 @@ public class Refund {
         @SerializedName("payment_status")
         private final int paymentStatus;
 
+        @SerializedName("army_status")
+        private final String army_status;
+
         public Data(int id, String policyId, int age, int insuranceAmount, String name, String nrc,
                     Object personalNo, int insurancePeroid, String startDate, String endDate,
                     String monthlyDate, String dueDate, int amount, int bankFee, int easypayFee,
-                    int shFee, int paymentStatus) {
+                    int shFee, int paymentStatus,String army_status) {
 
             this.id = id;
             this.policyId = policyId;
@@ -129,6 +132,7 @@ public class Refund {
             this.bankFee = bankFee;
             this.easypayFee = easypayFee;
             this.shFee = shFee;
+            this.army_status = army_status;
             this.paymentStatus = paymentStatus;
         }
 
@@ -194,6 +198,10 @@ public class Refund {
 
         public int getShFee() {
             return shFee;
+        }
+
+        public String getArmy_status() {
+            return army_status;
         }
 
         public int getPaymentStatus() {

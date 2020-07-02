@@ -85,6 +85,7 @@ class CheckRefundActivity : AppCompatActivity() {
                         txt_error_message.text = it.item.data.toString()
                     }
                     else if(it.item.message.equals("success")){
+                        var soldier = "အခြား"
                         Log.d("test","success")
                         refund_btn.visibility = View.VISIBLE
                       if(it.item.data is Refund.Data){
@@ -98,6 +99,14 @@ class CheckRefundActivity : AppCompatActivity() {
                           refund_user_id.setText("${information.id}")
                           refund_age.setText("${information.age}")
                           die_policy.setText(information.policyId)
+
+                          if(information.army_status.equals("1")){
+                              soldier = "တပ်မတော်သား"
+                          }
+
+
+
+                          edt_refund_soldier.setText(soldier)
                           die_nrc.setText(information.nrc)
                           die_amount.setText("${information.amount} ကျပ်")
                           die_period.setText("${information.insurancePeroid} နှစ်")
@@ -106,6 +115,8 @@ class CheckRefundActivity : AppCompatActivity() {
                           die_period_month.setText("${it.item.paidMonth} လ")
                           die_deposite_amount.setText("${it.item.depositedAmt} ကျပ်")
                           die_claim_amount.setText("${it.item.claimAmount} ကျပ်")
+                          edt_refund_end_date_premium.setText("${information.monthlyDate}")
+                          edt_refund_last_premium.setText("${information.dueDate}")
                           claim = "${it.item.claimAmount}"
 
                           loan = "${deduct.loan}"

@@ -27,9 +27,18 @@ class CheckFullYear : AppCompatActivity() {
     }
     var context = this
     lateinit var id : String
+    lateinit var lost : String
     lateinit var user_id : String
     lateinit var customProgressBar: CustomProgressBar
     lateinit var amount : String
+
+    lateinit var loan : String
+    lateinit var loaninterest : String
+    lateinit var premium : String
+    lateinit var persistance : String
+    lateinit var contractFine : String
+    lateinit var contractcopy : String
+    lateinit var lostcontractStamp : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,13 +47,15 @@ class CheckFullYear : AppCompatActivity() {
         customProgressBar = CustomProgressBar()
         Log.d("test","fullyear")
         check_rest.setOnClickListener {
-            fetchDataViewModel.sendFull(user_id,amount)
+            fetchDataViewModel.sendFull(user_id,amount,loan,loaninterest,premium,persistance,contractFine,contractcopy,
+            lostcontractStamp)
         }
         val sharedPreference = SharedPreference(context)
         id  = intent.getStringExtra("id")!!
+        lost = intent.getStringExtra("lost")!!
 
         user_id = sharedPreference.getUserInfo("user_id")!!
-        fetchDataViewModel.checkFullYear(id)
+        fetchDataViewModel.checkFullYear(id,lost)
 
         fetchDataViewModel.fullcheck.observe(this, Observer {
             when(it){
@@ -71,6 +82,35 @@ class CheckFullYear : AppCompatActivity() {
                         die_deposite_amount.setText("${it.item.depositedAmt} ကျပ်")
                         die_claim_amount.setText("${it.item.claimAmount} ကျပ်")
                         amount = it.item.claimAmount.toString()
+
+                        edt_id.setText("${info.id}")
+                        edt_fullyear_nrc.setText("${info.nrc}")
+                        edt_fullyear_own_id.setText("${info.personalNo}")
+                        full_year_soldier.setText("${info.army_status}")
+                        edt_fullyear_last_premium.setText("${info.monthlyDate}")
+                        edt_fullyear_last_date.setText("${info.dueDate}")
+
+                        val deduct = it.item.deductData;
+                        edt_fullloan_money.setText("${deduct.loan} ကျပ်")
+                        edt_fullloan_interest.setText("${deduct.loanInterest} ကျပ်")
+                        edt_full_premium.setText("${deduct.premium} ကျပ်")
+                        edt_full_persistent_interest.setText("${deduct.persistentInterest} ကျပ်")
+                        edt_lost_full_contract_stamp.setText("${deduct.lostContractStamp} ကျပ်")
+                        edt_full_contract_fines.setText("${deduct.contractFines} ကျပ်")
+                        edt_full_contract_copy.setText("${deduct.contractCopy} ကျပ်")
+                        edt_full_total_deduct_amount.setText("${deduct.totalDeductAmount} ကျပ်")
+
+                        loan = "${deduct.loan}"
+                        loaninterest = "${deduct.loanInterest}"
+                        premium = "${deduct.premium}"
+                        persistance = "${deduct.persistentInterest}"
+                        lostcontractStamp = "${deduct.lostContractStamp}"
+                        contractFine = "${deduct.contractFines}"
+                        contractcopy = "${deduct.contractCopy}"
+
+
+
+
                     }
                     else if(it.item.data is String){
                         Log.d("test","is string")

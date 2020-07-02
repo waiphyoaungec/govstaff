@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.civilservantapp.R
@@ -14,7 +15,7 @@ import com.example.civilservantapp.view.activity.rest.CheckRest
 import kotlinx.android.synthetic.main.activity_check_policy.*
 
 class CheckPolicy : AppCompatActivity() {
-
+    var lost = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_policy)
@@ -34,6 +35,7 @@ class CheckPolicy : AppCompatActivity() {
             choose_tool_bar.title = "စာရင်းပိတ်လျှောက်ထားရန်"
         }
         else if(title.equals("fullyear")){
+            rdo_choose.visibility = View.VISIBLE
             choose_tool_bar.title = "နှစ်စေ့တောင်းခံလွှာလျှောက်ထားရန်"
         }
 
@@ -57,11 +59,23 @@ class CheckPolicy : AppCompatActivity() {
                     startActivity(i)
                 }
                 else if(title.equals("fullyear")){
+                    checkSoldier()
                     val i = Intent(this, CheckFullYear::class.java)
                     i.putExtra("id",choose_policy_id.text.toString())
+                    i.putExtra("lost","$lost")
+
                     startActivity(i)
                 }
             }
         }
+    }
+    fun checkSoldier() {
+        if(rdo_lost.isChecked){
+            lost = 1
+        }
+        else if(rdo_other.isChecked){
+            lost = 0
+        }
+
     }
 }
