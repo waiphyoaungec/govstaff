@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/cardview_light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_paymentpayment"
+            android:layout_margin="10dp"
+            android:id="@+id/lblconfirmamount"
+            android:layout_centerVertical="true"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/lblconfirmamount"
+            android:textColor="@color/colorAccent"
+            android:text=""
+            android:textSize="25dp"
+            android:id="@+id/lblpremiumkyat"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lblpremiumkyat"
+            android:text="ကျပ်"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/lblkyat"/>
+    </RelativeLayout>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <RadioButton
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Over the Counter"
+            android:checked="true"
+            android:textStyle="bold"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/img_otc"
+            android:id="@+id/chkoverthecounter"/>
+        <RadioButton
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:drawableStart="@drawable/img_easypay"
+            android:text="Mobile Wallet      "
+            android:drawablePadding="10dp"
+            android:id="@+id/chkmobilewallet"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:drawableStart="@drawable/img_mpu"
+            android:text="MPU Payment      "
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:id="@+id/chkmpu"
+            android:textStyle="bold"/>
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navItemHome"
+            android:icon="@drawable/img_home"
+            android:title="ပင်မစာမျက်နှာ"/>
+        <item
+            android:id="@+id/navItemLifeInsuranceForm"
+            android:icon="@drawable/img_lifeinsurance"
+            android:title="အသက်အာမခံ အဆိုလွှာ"/>
+        <item
+            android:id="@+id/navItemmonthlyPay"
+            android:icon="@drawable/img_monthlypay"
+            android:title="လစဉ်ကြေး ပေးသွင်းရန်"/>
+        <item android:id="@+id/nav_refund"
+            android:icon="@drawable/ann_ngway"
+            android:title="အမ်းငွေ"/>
+        <item
+            android:id="@+id/nav_loan"
+            android:icon="@drawable/chay_ngway"
+            android:title="ချေးငွေ"
+            />
+        <item
+            android:id="@+id/close"
+            android:icon="@drawable/ic_stop"
+            android:title="စာရင်းပိတ်လျှောက်ထားရန်"/>
+        <item
+            android:id="@+id/dead"
+            android:icon="@drawable/ic_dead"
+            android:title="သေဆုံးတောင်းခံလွှာလျှောက်ထားရန်"/>
+        <item
+            android:id="@+id/full_year"
+            android:icon="@drawable/full_year"
+            android:title="နှစ်စေ့တောင်းခံလွှာလျှောက်ရန်"/>
+        <item
+            android:id="@+id/navItemgetContract"
+            android:icon="@drawable/policy_contract"
+            android:title="ပေါ်လစီ စာချုပ်ထုတ်ယူရန်"/>
+
+        <item
+            android:id="@+id/navItemJobUpdate"
+            android:icon="@drawable/img_jobupdate"
+            android:title="ရုံး/လုပ်ငန်းဌာန ပြောင်းလဲရန်"/>
+        <item
+            android:id="@+id/nav_existing"
+            android:icon="@drawable/policy_contract"
+            android:title="ယခင်ပေါ်လစီအိုင်ဒီရှိပါကချိတ်ရန်"/>
+        <item
+            android:id="@+id/navItemLogout"
+            android:icon="@drawable/logout_icon"
+            android:title="ထွက်မည်" />
+    </group>
+</menu>

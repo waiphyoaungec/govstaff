@@ -1,0 +1,199 @@
+<resources>
+    <string name="drawer_monthlypay">လစဥ္ေၾကး ေပးသြင္းရန္</string>
+    <string name="app_name">နိုင်ငံ့ဝန်ထမ်းအသက်အာမခံ</string>
+    <string name="lifeTitle">အသက္အာမခံ အဆိုလႊာ</string>
+    <string name="servname">လျှောက်ထားသူအမည်</string>
+    <string name="serdob">မွေးသက္ကရာဇ်</string>
+    <string name="commingage">လာမည့်နှစ်မွေးနေ့တွင် ပြည်မည်အသက်</string>
+    <string name="nrc_lbl">အမ်ိဳးသားမွတ္ပုံတင္\nအမွတ္</string>
+    <string name="nrc_no">မွတ္ပုံတင္အမွတ္</string>
+    <string name="fulljob">အလုပ်အကိုင်အပြည့်အစုံ</string>
+    <string name="department">႐ုံး/လုပ္ငန္းဌာန</string>
+    <string name="peraddr">အမြဲတမ်းနေထိုင်သည့် နေရပ်လိပ်စာ</string>
+    <string name="contactphno">ဆက်သွယ်ရမည့်ဖုန်းနံပါတ်</string>
+    <string name="bornaddr">မွေးဖွားရာဒေသ</string>
+    <string name="male">ကျား</string>
+    <string name="female">မ</string>
+    <string name="fathername">အဘအမည်</string>
+    <string name="office">လျှောက်ထားမည့်ရုံး/ဌာနအမည်</string>
+    <string name="salary">အမြဲတမ်းလစာ</string>
+    <string name="iamount">အာမခံထားငွေ</string>
+    <string name="ilength">အာမခံထားမည့် သက်တမ်း</string>
+    <string name="lblcontinue">ဆက်လုပ်မည်</string>
+    <string name="lblbodysign">ထင်ရှားသောအမှတ်အသား</string>
+    <string name="lblheight">အရပ်အမြင့်</string>
+    <string name="lblweight">ကိုယ်အလေးချိန်</string>
+    <string name="lblstatedivision">ပြည်နယ်/တိုင်း</string>
+    <string name="lbldistrict">ခရိုင်</string>
+    <string name="lbltownship">မြို့</string>
+    <string name="lblministry">ဝန်ကြီးဌာန</string>
+    <string name="lbldepartment">ဌာနခွဲ</string>
+
+    <string name="lblpassexist">ယခင္က အာမခံထားရန္ အဆိုလႊာတင္ခဲ့ဖူးျခင္း ရွိ/မရွိ</string>
+    <string name="lblpassexistdate">အဆိုလႊာတင္ခဲ့ဖူးျခင္းရွိလွ်င္၊ တင္ခဲ့သည့္ရက္စြဲ</string>
+    <string name="hint_previouspolicyid">ယခင္ေပၚလစီအမွတ္</string>
+    <string name="lblacceptorreject">အာမခံလုပ္ငန္းမွ လက္ခံရန္ျငင္းပယ္ျခင္း ရွိ/မရွိ</string>
+    <string name="lblanydrug">ဘိန္း ၊ ကိုကင္း ၊ နီကိုတင္း ႏွင့္ စြဲေစတတ္ေသာ ေဆးဝါးမ်ား သုံးစြဲဖူးပါသလား။</string>
+    <string name="lbldisease">ေအာက္ပါေရာဂါမ်ား ျဖစ္ဖူးပါသလား။</string>
+    <string name="lbldiseaselist">ေအာက္ပါေရာဂါမ်ား ျဖစ္ဖူးပါသလား။</string>
+    <string name="lblhappendisease">ေအာက္ပါေရာဂါမ်ားျဖစ္ခဲ့ဖူးပါသည္</string>
+    <string name="hint_otherdisease">အခြားရောဂါများဖော်ပြရန်</string>
+    <string name="lblposition">ရာထူး</string>
+    <string name="lblfeet">ပေ</string>
+    <string name="lblinch">လက်မ</string>
+    <string name="lblyear">ခုနှစ်</string>
+    <string name="lblmonth">လ</string>
+    <string name="lblday">ရက်</string>
+
+    <string name="finsurancelength">၃ႏွစ္</string>
+    <string name="sinsurancelength">၅ႏွစ္</string>
+    <string name="tinsurancelength">၁၀ႏွစ္</string>
+
+    <string name="lblbeneficiary">အက်ိဳးခံစားခြင့္ရွိသူ</string>
+    <string name="lblbeneficiaryname">အမည္</string>
+    <string name="lblbeneficiarynrc">အမ်ိဳးသားမွတ္ပုံတင္အမွတ္</string>
+    <string name="lblbeneficiaryfthname">အဖအမည္</string>
+    <string name="lblbeneficiaryrelation">ေတာ္စပ္ပုံ</string>
+    <string name="lblbeneficiaryage">အသက္</string>
+    <string name="lblbeneficiarypercent">ရာခိုင္ႏႈန္း</string>
+
+    <string name="btnsaveall">အားလံုးသိမ္းမည္</string>
+    <string name="btnaddother">ေနာက္ထပ္ထပ္ထည့္မည္</string>
+
+    <string name="title_rg">အေကာင့္အသစ္ေဆာက္မည့္ အဆိုလြွာ</string>
+    <string name="hint_rg_name">အမည္</string>
+    <string name="hint_rg_username">လ်ွိဳ႔၀ွက္အမည္</string>
+    <string name="hint_rg_email">အီးေမလ္း</string>
+    <string name="hint_rg_password">လျှို့ဝှက်နံပါတ်</string>
+    <string name="hint_rg_confirmpassword">လ်ိဳ႔၀ွက္နံပါတ္ျပန္ရိုက္ပါ</string>
+    <string name="hint_rg_phone">xxxxxxxxx</string>
+    <string name="btn_rg_save">သိမ္းဆည္းမည္</string>
+    <string name="btn_reset">ပြန်လည်သတ်မှတ်သည်</string>
+
+    <string name="title_login">နိုင်ငံဝန်ထမ်းအသက်အာမခံ</string>
+    <string name="btn_login">၀င်မည်</string>
+    <string name="lbl_register">မွတ္တမ္းတင္မည္</string>
+    <string name="login_progressmsg">လုပ်ဆောင်နေပါသည်</string>
+    <string name="form_lbloffice">ရံုးေရြးခ်ယ္ပါ</string>
+    <string name="form_dialog">လိုအပ္သည့္အခ်က္အလက္မ်ားရယူေနပါသည္</string>
+
+    <string name="preview_officename">ရံုးအမည္</string>
+    <string name="preview_gender">ကျား/မ</string>
+    <string name="lblsubstractlist">ျဖတ္စာရင္းအတြက္ေရြးပါ</string>
+    <string name="preview_township">ျမိဳ႕</string>
+    <string name="preview_department">ဌာန</string>
+    <string name="premium_kyat">ပရီမီယံေၾကး</string>
+    <string name="preview_previousformy">ယခင္က အာမခံထားရန္ အာမခံထားရန္ အဆိုလြွာတင္ဖူးခဲ့ပါသည္။</string>
+    <string name="preview_previousforn">ယခင္က အာမခံထားရန္ အာမခံထားရန္ အဆိုလြွာ မတင္ဖူးခဲ့ပါ။</string>
+    <string name="preview_accept">အာမခံလုပ္ငန္းမွ လက္ခံရန္ျငင္းပယ္ျခင္း ရွိပါသည္။</string>
+    <string name="preview_reject">အာမခံလုပ္ငန္းမွ လက္ခံရန္ျငင္းပယ္ျခင္း မရွိပါ။</string>
+    <string name="preview_drugsn">ဘိန္း ၊ ကိုကင္း ၊ နီကိုတင္း ႏွင့္ စြဲေစတတ္ေသာ ေဆးဝါးမ်ား မသုံးစြဲဖူးပါ။</string>
+    <string name="preview_drugsy">ဘိန္း ၊ ကိုကင္း ၊ နီကိုတင္း ႏွင့္ စြဲေစတတ္ေသာ ေဆးဝါးမ်ား သံုးစြဲဖူးပါသည္။</string>
+    <string name="preview_address">ေနရပ္လိပ္စာ</string>
+    <string name="cost">က်သင့္ေငြ</string>
+    <string name="preview_beneficiaryperson">အက်ိဳးခံစားခြင့္ရွိသူ</string>
+    <string name="preview_otherperson">အျခားအက်ိဳးခံစားခြင့္ရွိသူ</string>
+
+    <string name="confirm_paymentname">အမည္</string>
+    <string name="confirm_paymentpolicyid">ေပၚလစီအိုင္တီ</string>
+    <string name="confirm_pyamentvocherid">ေပါက္ခ်ာနံပါတ္</string>
+    <string name="confirm_paymentsupply">ျဖည့္သြင္းသည့္လ</string>
+    <string name="confirm_paymenttype">ေငြေပးေခ်မည့္ပံုစံ</string>
+    <string name="confirm_paymentpayment">ကျသင့်ငွေ</string>
+    <string name="confirm_payment">ေငြေပးေခ်မည္</string>
+    <string name="btn_preview">ဆက္လက္လုပ္ေဆာင္မည္</string>
+
+    <string name="life_titlepreview">ေဒတာမ်ားကိုျပန္ၾကည့္သည့္အဆိုလြွာ</string>
+    <string name="life_titleconfirmpayment">ငွေပေးချေမည့်အဆိုလွှာ</string>
+    <string name="profile_tile">သုံးစွဲသူအချက်အလက်</string>
+    <string name="profile_premiuminfotitle">ပရီမီယံအချက်အလက်</string>
+    <string name="profile_premiumkyat">ပရီမီယံကျပ်</string>
+    <string name="profile_premiumstatus">ပရီမီယံအခြေအနေ</string>
+    <string name="profile_previouspremiumstatus">ယခင်ပရီမီယံအခြေအနေ</string>
+    <string name="profile_previouspremiumaccpt">အာမခံလုပ်ငန်းလက်ခံမှုအခြေအနေ</string>
+
+    <string name="profile_insuranceinfotitle">အာမခံအချက်အလက်</string>
+    <string name="profile_insuranceamount">အာမခံထားငွေ</string>
+    <string name="profile_insuranceperiod">အာမခံထားမည့်သက်တမ်း</string>
+    <string name="profile_countpaidmonth">ပေးသွင်းပြီးသည့်လအရေအတွက်</string>
+    <string name="profile_paidmonths">ပေးသွင်းပြီးသည့်လများ</string>
+    <string name="profile_countduemonth">ပေးသွင်းရန်ကျန်သေးသည့်အရေအတွက်</string>
+    <string name="profile_duemonths">ပေးသွင်းရန်ကျန်သေးသည့်လများ</string>
+    <string name="profile_duedate">နောက်ဆုံးပေးသွင်းရမည့်နေ့</string>
+    <string name="profile_monthlyamt">လစဉ်ကြေး</string>
+    <string name="profile_totaldepamt">လစဉ်ပေးသွင်းရမည့်ငွေ</string>
+    <string name="profile_name">အမည်</string>
+    <string name="profile_email">အီးေမးလ္</string>
+    <string name="profile_phone">ဖုန္း</string>
+    <string name="profile_policyid">ေပၚလစီနံပါတ္</string>
+    <string name="profile_policytitle">ေပၚလစီဆိုင္ရာအခ်က္အလက္မ်ား</string>
+
+    <string name="home_appname">နိုင္ငံ့၀န္ထမ္းအသက္အာမခံ</string>
+    <string name="profile_title">ကိုယ္ေရးမွတ္တမ္း</string>
+    <string name="logout">ထြက္မည္</string>
+
+    <string name="drawer_opened">Open</string>
+    <string name="drawer_closed">Closed</string>
+    <string name="supply_hint">ဖြည့်စွက်ပါ</string>
+
+    <string name="exist">ရှိ</string>
+    <string name="notexist">မရှိ</string>
+
+    <string name="lbl_otherfacts">အေၾကာင္းအရာ</string>
+    <string name="lbl_otherpercents">ရာခိုင္ႏႈန္း အခ်ိဳးအစား</string>
+
+    <string name="title_personbeneficiary">လူပုဂၢိုလ္</string>
+    <string name="title_otherbeneficiary">အျခား</string>
+    <string name="header_spinner">ေရြးခ်ယ္ရန္</string>
+    <string name="menu_continue">ဆက္လုပ္မည္</string>
+    <string name="menu_payment">Ok</string>
+
+    <array name="fnrc">
+        <item>ရွေးချယ်ရန်</item>
+        <item>၁</item>
+        <item>၂</item>
+        <item>၃</item>
+        <item>၄</item>
+        <item>၅</item>
+        <item>၆</item>
+        <item>၇</item>
+        <item>၈</item>
+        <item>၉</item>
+        <item>၁၀</item>
+        <item>၁၁</item>
+        <item>၁၂</item>
+        <item>၁၃</item>
+        <item>၁၄</item>
+    </array>
+
+    <array name="subfnrc">
+        <item>ေရြးခ်ယ္ရန္</item>
+        <item>ဗမန</item>
+        <item>ခဗန</item>
+        <item>အဂယ</item>
+        <item>ကမန</item>
+        <item>မခဘ</item>
+    </array>
+
+    <array name="subsnrc">
+        <item>ဘလခ</item>
+        <item>ဒမဆ</item>
+        <item>ဖဆန</item>
+        <item>လကန</item>
+        <item>မဖန</item>
+    </array>
+
+    <array name="lastnrc">
+        <item>ေရြးခ်ယ္ရန္</item>
+        <item>(ႏိုင္)</item>
+        <item>(ျပဳ)</item>
+        <item>(ဧည့္)</item>
+        <item>(သာ)</item>
+    </array>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

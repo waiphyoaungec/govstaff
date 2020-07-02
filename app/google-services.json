@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "461605154369",
+    "firebase_url": "https://my-application-9ce3a.firebaseio.com",
+    "project_id": "my-application-9ce3a",
+    "storage_bucket": "my-application-9ce3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461605154369:android:692285bf7df089511320c0",
+        "android_client_info": {
+          "package_name": "com.example.civilservantapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461605154369-r2sherdia9o6rk9ne6u6cc36nv48hl32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt3U2EHczWdkn_TDcJAt-WIf32AueZXYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461605154369-r2sherdia9o6rk9ne6u6cc36nv48hl32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
